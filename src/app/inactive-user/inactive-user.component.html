@@ -1,3 +1,8 @@
-<p>
-  inactive-user works!
-</p>
+<h3>Inactive User</h3>
+<ul class="list-group">
+  <li class="list-group-item"
+      *ngFor="let inActiveUser of users; let i = index">
+    {{inActiveUser}} |
+    <button class="btn btn-link" (click)="onSetInactive(i,true)">Set Inactive</button>
+  </li>
+</ul>
